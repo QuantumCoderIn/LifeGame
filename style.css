@@ -1,0 +1,89 @@
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+* {
+    font-family: 'JetBrains Mono', 'Consola', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+}
+
+#bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#scoreboard {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #444;
+}
+
+#reset-button {
+    padding: 5px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: #333;
+    width: auto;
+}
+
+#button-container {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-100vw);
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+.button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.animated {
+    opacity: 0;
+    transform: translateX(-100vw);
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+@media (max-width: 600px) {
+    .button {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
